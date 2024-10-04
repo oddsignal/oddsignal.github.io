@@ -1,0 +1,128 @@
+baseURL: "https://www.oddsignal.net/"
+title: OddSignal
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: OddSignal
+  description: "Just another software engineer who really hates surveillance culture."
+  keywords: [Blog, PaperMod, Privacy, Security]
+  author: OddSignal
+  # author: ["Me", "You"] # multiple authors
+  images: []
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+
+  label:
+    text: "OddSignal"
+    icon: https://infosec.exchange/@oddsignal
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: OddSignal
+    subtitle: "Just another software engineer who really hates surveillance culture."
+    imageUrl: "/apple-touch-icon.png"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "OddSignal.  Now in 3D!"
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Contact Info
+        url: contact
+
+  # home-info mode
+  homeInfoParams:
+    Title: "OddSignal"
+    Content: Welcome!
+
+  socialIcons:
+    - name: mastodon
+      url: "https://infosec.exchange/@oddsignal"
+    - name: github
+      url: "https://github.com/oddsignal/"
+    - name: signal
+      url: "https://signal.me/#eu/dbzb3GHduzbXLizEUJA0AAqn4gB5s13DbEjraaw4ON9zsUmmLJdBPYKXfLH8UOIH"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/oddsignal/oddsignal.github.io/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: posts 
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: contact 
+      name: Contact Info
+      url: /contact/
+      weight: 15
+    - identifier: github
+      name: Github
+      url: https://github.com/oddsignal
+      weight: 30
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
