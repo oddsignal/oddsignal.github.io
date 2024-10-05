@@ -11,6 +11,12 @@ minify:
   disableXML: true
   minifyOutput: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: OddSignal
@@ -60,7 +66,7 @@ params:
     imageUrl: "/apple-touch-icon.png"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: "OddSignal.  Now in 3D!"
+    imageTitle: "OddSignal"
     buttons:
       - name: Posts
         url: posts
@@ -86,7 +92,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/oddsignal/oddsignal.github.io/content"
+    URL: "https://github.com/oddsignal/oddsignal.github.io/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -111,6 +117,10 @@ menu:
       name: Contact Info
       url: /contact/
       weight: 15
+    - identifier: search 
+      name: Search
+      url: /search/
+      weight: 20
     - identifier: github
       name: Github
       url: https://github.com/oddsignal
@@ -119,6 +129,9 @@ menu:
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     noClasses: false
     # anchorLineNos: true
