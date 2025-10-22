@@ -81,6 +81,8 @@ params:
   socialIcons:
     - name: mastodon
       url: "https://infosec.exchange/@oddsignal"
+    - name: bluesky
+      url: "https://bsky.app/profile/oddsignal.net"
     - name: github
       url: "https://github.com/oddsignal/"
     - name: signal
